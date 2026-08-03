@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background: #faf9f6;
+  --surface: #ffffff;
+  --foreground: #1c1917;
+  --muted: #78716c;
+  --border: #e7e5e4;
+  --accent: #059669;
+  --accent-soft: #d1fae5;
+  --good: #059669;
+  --good-bg: #ecfdf5;
+  --good-border: #a7f3d0;
+  --moderate: #b45309;
+  --moderate-bg: #fffbeb;
+  --moderate-border: #fde68a;
+  --bad: #be123c;
+  --bad-bg: #fff1f2;
+  --bad-border: #fecdd3;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #131110;
+    --surface: #1d1a18;
+    --foreground: #f5f5f4;
+    --muted: #a8a29e;
+    --border: #2e2a27;
+    --accent: #34d399;
+    --accent-soft: #064e3b;
+    --good: #34d399;
+    --good-bg: #052e21;
+    --good-border: #065f46;
+    --moderate: #fbbf24;
+    --moderate-bg: #2e2005;
+    --moderate-border: #92600a;
+    --bad: #fb7185;
+    --bad-bg: #350a12;
+    --bad-border: #9f1239;
   }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-good: var(--good);
+  --color-good-bg: var(--good-bg);
+  --color-good-border: var(--good-border);
+  --color-moderate: var(--moderate);
+  --color-moderate-bg: var(--moderate-bg);
+  --color-moderate-border: var(--moderate-border);
+  --color-bad: var(--bad);
+  --color-bad-bg: var(--bad-bg);
+  --color-bad-border: var(--bad-border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
